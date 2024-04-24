@@ -1,0 +1,68 @@
+1.Write a blog on Difference between HTTP1.1 vs HTTP2 ?
+
+> [Multiplexing]:
+
+HTTP/1.1: Uses multiple connections for parallel requests,leading to potential latency issues and inefficient resource utilization.
+
+HTTP/2: Supports multiplexing, allowing multiple requests and responses to be sent and received concurrently over a single connection, 
+        improving efficiency and reducing latency.
+
+> [HeaderCompression]:
+
+HTTP/1.1: Sends headers in plaintext for each request and response, 
+          resulting information and increased overhead.
+
+HTTP/2: Utilizes header compression to reduce the size of headers, minimizing 
+        overhead and conserving bandwidth, particularly beneficial for small requests and responses.
+
+>[Server Push]:
+
+HTTP/1.1: Requires separate requests for each resource, leading 
+          to additional round trips and latency.
+
+HTTP/2: Introduces server push, enabling servers to proactively push resources to clients before they are requested, 
+        reducing round trips and accelerating page load times.
+
+>[Protocol]:
+
+HTTP/1.1: Relies on plain text for communication, which is human-readable 
+          but inefficient for parsing and processing.
+
+HTTP/2: Adopts a binary protocol for more efficient data transmission and parsing,reducing overhead
+        and improving performance,especially for large payloads and complex web applications.
+
+>[Compatibility and Adoption]:
+
+HTTP/1.1: Widely supported across web servers and browsers but lacks the performance optimizations of HTTP/2.
+
+HTTP/2: it Requires considerations for backward compatibility with existing infrastructure, browser support 
+        and implementation complexities, making it a compelling choice for optimizing web performance and user experience.
+
+2.Write a blog about objects and its internal representation in Javascript?
+   
+ >[Property Storage]:
+
+        Objects in JavaScript store properties either directly within the object itself (own properties) or in an external data
+        structure called the prototype chain. This distinction is important for property lookup and inheritance.
+
+>[Property Access]:
+
+        JavaScript engines employ efficient algorithms to locate and retrieve property values. This involves traversing the object's 
+        internal property map and, if necessary, navigating the prototype chain to resolve inherited properties.
+
+>[Memory Management]:
+
+        Objects in JavaScript are dynamically allocated in memory and automatically garbage-collected when they are no longer referenced.
+        This ensures optimal memory usage and performance by reclaiming unused memory.
+
+>[Hidden Classes and Shapes]:
+
+        JavaScript engines use optimization techniques like hidden classes and shapes to improve property access and memory usage.
+        Hidden classes represent the internal layout of objects,while shapes facilitate efficient property addition and deletion.
+
+>[Property Descriptors and Attributes]:        
+        Each property of an object is associated with metadata known as property descriptors, defining attributes like value, writability, 
+        enumerability, and configurability. Understanding these attributes is essential for manipulating object properties and ensuring data integrity.
+
+
+
